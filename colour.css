@@ -1,0 +1,48 @@
+html{
+  --bg: rgb(237, 212, 212);
+  --bg-panel: #ebebeb;
+  --color-heading: rgb(27, 168, 14); 
+  --color-text: #333333;
+}
+
+html[data-theme='dark'] {
+    --primary-color: #333333;
+    --secondary-color: #434343;
+    --bg-color: #0077ff; 
+    --font-color: #B5B5B5;
+    --heading-color:  #ab8958;
+}  
+
+
+body { 
+    background-color: var(--primary-color); /* background color variable */
+}
+
+.container {
+  background-color: var(--secondary-color); /* background panel color variable */
+  margin: 5em;
+  padding: 5em;
+  border-radius: 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80% auto;
+      grid-template-columns: 80% auto;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+      grid-template-areas: "title switch"
+ "content content";
+}
+
+.container h1 {
+  margin: 0;
+  color: var(--bg-color); /* heading 1 background color variable */
+}
+
+.container p {
+  color: var(--font-color); /* text-color variable */
+  -ms-grid-column-span: 2;
+  grid-area: content;
+  font-size: 1.1em;
+  line-height: 1.8em;
+  margin-top: 2em;
+}
